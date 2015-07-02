@@ -1,5 +1,12 @@
+h1{
+	background-color:#52A488;
+	color:white;
+	padding-left: 10px;
+}
+
 body {
-	background-color: #E6E6FA;
+
+	background-color: #D1F0E6;
 	font-size: 20px;
 	font-family:serif;
 	
@@ -10,4 +17,5 @@ body {
 	color:gray;
 
 }
+
 
