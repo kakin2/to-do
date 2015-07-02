@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<link href="style.css" rel="stylesheet"/>
+	<head>
+		<h1>To Do... </h1>
+		<title>todo</title>
+	</head>
+	<body>
+		
+		<div ng-controller="MainController">
+			<form name="frm"  ng-submit="addTodo()">
+				<input type="text" placeholder="Add Item" name="newtodo" ng-model="newtodo" required/>
+				<button ng-disabled="frm.$invalid">Add</button>
+			</form>
+			<button ng-click="clearCompleted()">Clear Completed</button> 
+		
+		<ul>
+			<li ng-repeat="todo in todos">
+				<input type="checkbox" ng-model="todo.done"/>
+				<span ng-class="{'done': todo.done}"> {{todo.title}}</span>
+					<button ng-click="deleteItem($index)">Remove</button>
+			</li>
+		</ul>
+		</div>
+
+		<script src="angular.min.js"></script>
+		<script src="app.js"></script>
+		<script src="MainController.js"></script>
+		
+	</div>
+	</body>
+</html>
